@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Figtree', sans-serif;
+  overflow: auto;
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+  justify-content: center;
+  height: 80px;
+  align-items: center;
+  z-index: 11;
+  position: fixed;
+  transition: 0.5s;
+}
+
+.navwrapper {
+  display: flex;
+  width: 75rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbrand {
+  display: flex;
+  gap: 40px;
+}
+
+.brand {
+  width: 100px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: solid #7396BF 1px;
+  padding-inline: 20px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.search {
+  width: 400px;
+  outline: none;
+  border : none;
+  padding-block: 15px;
+  font-size: 1em;
+}
+
+.search-bar i {
+  color: #7396BF;
+}
+
+.nav ul{
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  gap: 50px;
+}
+
+.nav ul li a{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  color: #10405a;   
+  width: 70px;
+  transition: 0.3s;
+}
+
+.nav ul li a i {
+  font-size: 1.5em;  
+}
+
+.nav ul li a:hover{
+  color: rgb(59 130 246);
+}
+
+.resp-btn {
+  display: none;
+}
+
+.search-button {
+  font-size: 1.5em;
+  display: none;
+  margin-right: 20px;
+}
+
+.toggle-button {
+  font-size: 1.5em;
+  display: none;
+  margin-right: 20px;
+}
+
+.container {
+  background-color: #7396BF;
+  min-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 75rem;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.pricing h1 {
+  color: #ffffff;
+  text-shadow: 2px 1px 3px rgba(16, 64, 90, 0.2);
+  font-size: 2em;
+}
+
+.pricing-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(186 230 253);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.pricing-card-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.pricing-card-rp {
+  padding: 20px;
+  background-color: #FFE606;
+  border: rgb(234 179 8) solid 15px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.pricing-card-rp p {
+  font-size: 1.5em;
+  color: #10405a;
+  font-weight: 700;
+}
+
+.pricing-card-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.pricing-card-right button {
+  height: 50px;
+  width: 130px;
+  font-size: 1em;
+  border: none;
+  background-color: #7396BF;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.materi h1 {
+  color: #ffffff;
+  margin-block: 20px;
+  text-shadow: 2px 1px 3px rgba(16, 64, 90, 0.2);
+}
+
+.materi-card-container {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.materi-card {
+  height: 170px;
+  width: 270px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.materi-card img {
+  width: 270px;
+}
+
+.materi-card:hover > img {
+  transform: scale(1.2);
+}
+
+.materi-card .content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, .5);
+  text-align: center;
+}
+
+.materi-card .content h3 {
+  font-size: 2em;
+  color: #10405a;
+}
+
+.materi-card .content p {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.materi-card > img,
+.materi-card > .content {
+  transition: 0.5s;
+}
+
+.materi-card > .content.fade {
+  opacity: 0;
+}
+
+.materi-card:hover > .content.fade {
+  opacity: 1;
+}
+
+.materi-card-container button {
+  height: 50px;
+  width: 50px;
+  background-color: #FDE409;
+  border: #FDE409 solid 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.materi-card-container button i{
+  font-size: 1.3em;
+  color: #10405a;
+}
+
+.materi-card-container button:hover {
+  background-color: rgb(234 179 8);
+}
+
+.materi-detail h1 {
+  color: #ffffff;
+  margin-block: 20px;
+  text-shadow: 2px 1px 3px rgba(16, 64, 90, 0.2);
+}
+
+.materi-detail-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.materi-detail-text p {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.materi-detail-text button {
+  padding-block: 7px;
+  padding-inline: 30px;
+  background-color: #FDE409;
+  border:  #FDE409 solid 2px;
+  border-radius: 50px;
+  color: #10405a;
+  margin-top: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9em;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.materi-detail-text button i {
+  background-color: #10405a;
+  padding: 7px;
+  border-radius: 50%;
+  transform: translateX(50%);
+  color: #FDE409;
+  transition: 0.3s;
+}
+
+.materi-detail-text button:hover {
+  background-color: rgb(234 179 8);
+}
+
+.materi-detail-text button:hover i{
+  transform: translateX(70%);
+}
+
+.footer {
+  background-color: #10405a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+}
+
+.footer-content {
+  width: 75rem;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.footer-content h1 {
+  font-weight: 800;
+}
+
+.footer-contacts {
+  display: flex;
+  gap: 4rem;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.footer-contact {
+  display: flex;
+  gap: 5px;
+  color: rgb(203 213 225);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.footer-contact:hover {
+  color: #ffffff;
+}
+
+.footer-contact i {
+  font-size: 1.5em;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+hr {
+  height: 1px;
+  border-width:0;
+  background-color: lightslategray;
+  margin-top: 20px;
+}
+
+.footer-content h2 {
+  padding-top: 20px;
+  font-weight: 800;
+  font-size: 1.3em;
+  color: rgb(148 163 184);
+}
+
+@media only screen and (max-width: 1000px) {
+  .resp-btn {
+    display: flex;
+  }
+  .nav {
+      display: none;
+  }
+  .nav ul {
+      position: fixed;
+      width: 100%;
+      height: 350px;
+      background-color: #ffffff;
+      top: 80px;
+      left: 0;
+      text-align: center;
+      flex-direction: column;
+  }
+  .nav ul li {
+      text-align: center;
+      flex-direction: column;
+      padding: 10px;
+  }
+  .nav ul li a {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+  }
+  .nav.active {
+      display: flex;
+  }
+  .search-bar {
+      display: none;
+  }
+  .search-bar {
+      position: fixed;
+      width: 100%;
+      height: 100px;
+      background-color: #ffffff;
+      top: 80px;
+      left: 0;
+      border-radius: 0;
+  }
+  .search-bar.active {
+      display: flex;
+      justify-content: space-between;
+  }
+  .toggle-button {
+      display: block;
+  }
+  .search-button {
+      display: block;
+  }
+  .wrapper {
+    width: 95%;
+  }
+  .pricing-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pricing-card-left {
+    gap: 10px;
+  }
+  .materi-card-container {
+    flex-direction: column;
+  }
+  .materi-detail {
+    text-align: center;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+  }
+  .footer-content h1 {
+      font-size: 1.2em;
+      margin-top: 20px;
+  }
+  .footer-contacts{
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+  }
+  .footer-contact {
+      flex-direction: column;
+  }
+  .footer-contact i {
+      font-size: 1.2em;
+  }
+  .footer-contact p {
+      font-size: 1em;
+  }
+  hr {
+      display: none;
+  }
+  .footer-content h2 {
+      padding-top: 10px;
+  }
+}
+
